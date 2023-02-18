@@ -1,0 +1,28 @@
+{
+  "name": "team-manager2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zim40/Team-Manager-CLI-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zim40/Team-Manager-CLI-Application/issues"
+  },
+  "homepage": "https://github.com/Zim40/Team-Manager-CLI-Application#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "inquirer": "^8.2.4",
+    "jest": "^29.4.3"
+  }
+}
