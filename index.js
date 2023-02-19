@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const managers = require("./lib/manager");
 const Employee = require("./lib/employee.js");
+const Engineer = require("./lib/employee.js");
+const Intern = require("./lib/employee.js");
 
 const option = [
     {name: 'Intern'},
@@ -99,12 +101,12 @@ const option = [
             type: 'list',
             message: 'Select Team Member:',
             name: 'selectedTeam',
-            choices: option,
+            choices: ['Engineer', 'Intern', 'Finished selecting Team'],
         },
 ])
 .then((answers) => {
 //    Creates new employee(manager)
-    const manager = new Employee(
+    const manager = new managers(
         answers.name,
         answers.id,
         answers.email,
@@ -112,7 +114,16 @@ const option = [
     )
     // Creates HTML using generateCard method/ other roles need extended classes/
     const managerhtml = manager.generateCard();
-    console.log(managerhtml);
+    console.log("first", managerhtml);
+
+    const engineer = new Engineer(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.github,
+    )
+    const engineerhtml = engineer.generateEnginCard(Engineer)
+    console.log( "second", engineerhtml);
 })
 
 
