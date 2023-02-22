@@ -1,8 +1,10 @@
 const inquirer = require("inquirer");
 const {Manager, Engineer, Intern} = require("./lib/manager");
+const fs = require('fs');
 // const {Engineer} = require("./lib/employee.js");
 
 const team = [];
+const genCard = "";
 function generateManager () {
     inquirer
     .prompt ([
@@ -42,7 +44,7 @@ function generateManager () {
         addMember();
        })
 }
-function addMember () {
+function addMember() {
     inquirer.prompt([
         {
             type: 'list',
@@ -51,18 +53,42 @@ function addMember () {
             choices: ['Engineer', 'Intern', 'Finished selecting Team'],
         },
     ])
-    .then((answers) => {
-        if(answers.selectedTeam === 'Engineer') {
-            generateEngineer();
-        }else if(answers.selectedTeam === 'Intern'){
-            generateIntern();
-        }else{
-            // This is where the generate html goes
-            
-            console.log(team);
-        }
-    })
+        .then((answers) => {
+            if (answers.selectedTeam === 'Engineer') {
+                generateEngineer();
+            } else if (answers.selectedTeam === 'Intern') {
+                generateIntern();
+            } else {
+
+                console.log(team);
+                const htmlArray = team.map(teamMember => {
+                    return teamMember.generateCard();
+                })
+                const cards = htmlArray.join('');
+                const endHtml = `  
+                ${cards}
+                
+             </div>
+             
+              <script> src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"</script>
+             </body>
+             
+             </html>`;
+
+
+                console.log(htmlArray);
+                writeToFile(endHtml);
+
+
+
+
+            }
+        })
 }
+
+
+    
+
 
 generateManager();
 
@@ -90,12 +116,12 @@ function generateEngineer() {
             name: 'github',
         },
     ])
-        .then((engineerAnswers) => {
+        .then((answers) => {
             const engineer = new Engineer(
-                engineerAnswers.name,
-                engineerAnswers.id,
-                engineerAnswers.email,
-                engineerAnswers.github,
+                answers.name,
+                answers.id,
+                answers.email,
+                answers.github,
             )
             team.push(engineer);
             addMember();
@@ -130,11 +156,26 @@ function generateIntern () {
             answers.email,
             answers.github,
         )
+     
         team.push(intern);
         addMember();
     })
    
 }
+ // TODO: Create a function to write html file
+ function writeToFile(cards) {
+    
+    
+    fs.writeFile("team.html", cards, err => {
+        if(err) {
+            return console.log("Error Writing File");
+        }
+        console.log("File Created!");
+    })
+    
+}
+
+
 
 
 
