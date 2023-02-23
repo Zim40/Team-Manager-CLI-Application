@@ -66,12 +66,14 @@ function addMember() {
                 })
                 const cards = htmlArray.join('');
                 const endHtml = `  
+                
 ${cards}
                 
     </div>
-             
+  </div>
+</div>        
         <script> src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"</script>
-    </body>
+</body>
 </html>`;
 
 
@@ -153,7 +155,7 @@ function generateIntern () {
             answers.name,
             answers.id,
             answers.email,
-            answers.github,
+            answers.school,
         )
      
         team.push(intern);
