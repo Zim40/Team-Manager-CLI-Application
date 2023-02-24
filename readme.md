@@ -1,4 +1,19 @@
-# Team Manager CLI Application
+# Team Manager CLI Application <br>
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Table of Contents
+***
+ - [About](#about)
+ - [Description](#description)
+ - [Future Development](#futuredevelopment)
+ - [Installation](#installation)
+ - [Usage](#usage)
+ - [Contributers](#contributers)
+ - [Contact-Links](#contact-links)
+ - [Licence](#licence)
+ - [Demo](#demo)
+ - [Screenshot](#screenshot)
+
 ## About
 ***
 This project is designed and created to take in the users input through command line prompts and generate a webpages consisting of cards based on the users answers.
@@ -47,5 +62,14 @@ Repository: [Zim40](https://github.com/Zim40/Team-Manager-CLI-Application)
 [Contact Us](mailto:michaelm810129@gmail.com)<br>
 [GitHub](https://github.com/Zim40)
 
+## Licence
+***
+This repository is covered under the MIT licence.
+
+## Demo
+***
+[Demonstration video](https://drive.google.com/file/d/1Cx9ZIEn17IYvF4A7nuWVjm7Li8zRePFT/view)
+
 ## ScreenShot
+
 !["screenshot"](./style/projectScreenshot.png)
