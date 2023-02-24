@@ -58,16 +58,13 @@ This project was created solely by<br>
 Repository: [Zim40](https://github.com/Zim40/Team-Manager-CLI-Application)
 
 ## Contact
-***
 [Contact Us](mailto:michaelm810129@gmail.com)<br>
 [GitHub](https://github.com/Zim40)
 
 ## Licence
-***
 This repository is covered under the MIT licence.
 
 ## Demo
-***
 [Demonstration video](https://drive.google.com/file/d/1Cx9ZIEn17IYvF4A7nuWVjm7Li8zRePFT/view)
 
 ## ScreenShot
