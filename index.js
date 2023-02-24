@@ -1,10 +1,10 @@
 const inquirer = require("inquirer");
 const {Manager, Engineer, Intern} = require("./lib/manager");
 const fs = require('fs');
-// const {Engineer} = require("./lib/employee.js");
+
 
 const team = [];
-const genCard = "";
+// Generate Manager cards
 function generateManager () {
     inquirer
     .prompt ([
@@ -44,6 +44,7 @@ function generateManager () {
         addMember();
        })
 }
+// Add members (Engineer, Intern or end team building)
 function addMember() {
     inquirer.prompt([
         {
@@ -61,6 +62,7 @@ function addMember() {
             } else {
 
                 console.log(team);
+                // Maps through team object and creates seperate arrays for each selection and then creates a new variable consisting of seperate arrays
                 const htmlArray = team.map(teamMember => {
                     return teamMember.generateCard();
                 })
@@ -92,7 +94,7 @@ ${cards}
 
 
 generateManager();
-
+// Generates Engineer cards
 function generateEngineer() {
     inquirer.prompt([
         // Engineer Prompts
@@ -128,6 +130,7 @@ function generateEngineer() {
             addMember();
         })
 }
+// Generates Intern Cards
 function generateIntern () {
     inquirer.prompt ([
           {
@@ -163,7 +166,7 @@ function generateIntern () {
     })
    
 }
- // TODO: Create a function to write html file
+ //write html file
  function writeToFile(cards) {
     
     
@@ -175,109 +178,3 @@ function generateIntern () {
     })
     
 }
-
-
-
-
-
-// 
-//        .then((answers) => {
-//         if(answers.selectedTeam === 'Engineer') {
-//             inquirer
-//                 .prompt([
-        
-       
-//         // Engineer Prompts
-//         {
-//             type: 'input',
-//             message: 'Enter Engineers name:',
-//             name: 'name',
-//         },
-//         {
-//             type: 'input',
-//             message: 'Enter Engineers employee I.D:',
-//             name: 'engineersId', 
-//         },
-//         {
-//             type: 'input',
-//             message: 'Enter Engineers Email address:',
-//             name: 'engineersEmail',
-//         },
-//         {
-//             type: 'input',
-//             message: 'Enter GitHub Username:',
-//             name: 'engineersGitHub',
-//         },
-//         {
-//             type: 'list',
-//             message: 'Select Team Member:',
-//             name: 'selectedTeam',
-//             choices: ['Engineer', 'Intern', 'Finished selecting Team'],
-//         },
-//                 ])
-//                 .then((engineerAnswers) => {
-//                     const engineer = new Engineer(
-//                         engineerAnswers.name,
-//                         engineerAnswers.id,
-//                         engineerAnswers.email,
-//                         engineerAnswers.github,
-//                     )
-//                     const engineerhtml = engineer.generateCard()
-//                     console.log( "second", engineerhtml);
-//                 })
-//                 }
-//             })
-        
-       
-// //          // Intern Prompts
-
-//          {
-//             type: 'input',
-//             message: 'Enter Interns name:',
-//             name: 'name',
-//         },
-//         {
-//             type: 'input',
-//             message: 'Enter Interns employee I.D:',
-//             name: 'internId', 
-//         },
-//         {
-//             type: 'input',
-//             message: 'Enter Interns Email address:',
-//             name: 'internEmail',
-//         },
-//         {
-//             type: 'input',
-//             message: 'Enter Interns School:',
-//             name: 'internSchool',
-//         },
-//         {
-//             type: 'list',
-//             message: 'Select Team Member:',
-//             name: 'selectedTeam',
-//             choices: ['Engineer', 'Intern', 'Finished selecting Team'],
-//         },
-// ])
-// .then((answers) => {
-// //    Creates new employee(manager)
-  
-    
-//     // Creates HTML using generateCard method/ other roles need extended classes/
-//     const managerhtml = manager.generateCard();
-//     console.log("first", managerhtml);
-
-//     const engineer = new Engineer(
-//         answers.name,
-//         answers.id,
-//         answers.email,
-//         answers.github,
-//     )
-//     const engineerhtml = engineer.generateCard()
-//     console.log( "second", engineerhtml);
-// })
-
-
-
-
-
-// module.exports = inquirer
