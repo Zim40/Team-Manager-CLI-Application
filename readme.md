@@ -9,7 +9,7 @@
  - [Installation](#installation)
  - [Usage](#usage)
  - [Contributers](#contributers)
- - [Contact](#contact-links)
+ - [Contact](#contact)
  - [Licence](#licence)
  - [Demo](#demo)
  - [Screenshot](#screenshot)
