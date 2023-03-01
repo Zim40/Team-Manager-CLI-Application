@@ -10,7 +10,7 @@
  - [Tests](#tests)
  - [Usage](#usage)
  - [Contributers](#contributers)
- - [Contact-Links](#contact-links)
+ - [Contact](#contact)
  - [Licence](#licence)
  - [Demo](#demo)
  - [Screenshot](#screenshot)
@@ -73,7 +73,7 @@ To begin using this application input the **node index.js** command, from there 
 This project was created solely by<br>
 Repository: [Zim40](https://github.com/Zim40/Team-Manager-CLI-Application)
 
-## Contact - Links
+## Contact
 [Contact Us](mailto:michaelm810129@gmail.com)<br>
 [GitHub](https://github.com/Zim40)
 ***
