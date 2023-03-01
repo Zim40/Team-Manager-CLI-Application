@@ -1,5 +1,16 @@
-const {Manager, Engineer, Intern} = require('../lib/manager');
+const { Manager, Engineer, Intern } = require('../lib/manager');
+const Employee = require('../lib/employee');
 
+// EMPLOYEE TEST
+describe('Employee', () => {
+  test('should create an Employee object with a name, id, and email details', () => {
+    const employee = new Employee('John Doe', '1', 'johndoe@example.com');
+    expect(employee.name).toContain('John Doe');
+    expect(employee.id).toContain('1');
+    expect(employee.email).toContain('johndoe@example.com');
+  });
+
+});
 // MANAGER TEST
 describe('Manager', () => {
     describe('generateCard', () => {
