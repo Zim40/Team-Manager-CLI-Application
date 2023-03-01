@@ -81,7 +81,7 @@ Repository: [Zim40](https://github.com/Zim40/Team-Manager-CLI-Application)
 This repository is covered under the MIT licence.
 ***
 ## Demo
-[Demonstration video](https://drive.google.com/file/d/1Uqt_EwCM-sUxlgE_zui0_WqeWSXXqoMo/view)
+[Demonstration video](https://drive.google.com/file/d/1pzMkWCPBEvHENthRk9H450HI2mCeva5Q/view)
 ***
 ## ScreenShot
 !["screenshot"](./style/projectScreenshot.png)
